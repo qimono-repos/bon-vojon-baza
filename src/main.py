@@ -37,14 +37,32 @@ def main(page: ft.Page):
                 map.Map(
                     expand=True,
                     initial_center= map.MapLatitudeLongitude(34,58),
-                    initial_zoom= 4.5,
+                    initial_zoom= 3,
                     on_init=lambda e: print("New Map"),
                     on_tap=manage_map_tap,
+                    #on_event= handle_map_event,
                     layers=[
-                        map.TileLayer(url_template="https://tile.openstreetmap.org/{z}/{x}/{y}.png"),
-                        marker_layer 
-                        ],
+                        map.TileLayer(
+                            url_template="https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                            on_image_error= lambda e: print(e)),
                         
+                        marker_layer,
+                        #map.MarkerLayer(ref= marker_layer, markers=[])  
+                        map.SimpleAttribution(
+                            text='By QiMono. ',
+                            alignment= ft.alignment.bottom_left ,
+                            on_click=lambda e: e.page.launch_url('https://qimono76.wordpress.com'),
+
+                            ),
+                        # map.RichAttribution(
+                        #     attributions=[
+                        #         map.TextSourceAttribution(
+                        #             text='Powered by QiMono(TM)',
+                        #             on_click=lambda e: e.page.launch_url('https://qimono76.wordpress.com'),
+                        #             ),
+                        #         ],
+                        #     )
+                        ],
                     ),
                 alignment=ft.alignment.center_left,
             ),
