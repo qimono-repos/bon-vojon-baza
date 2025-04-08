@@ -8,7 +8,7 @@ def main(page: ft.Page):
             print('FAB')
 
     page.floating_action_button = ft.FloatingActionButton(
-        icon=ft.Icons.ADD, on_click=manage_fab
+        icon=ft.Icons.AIRPLAY, on_click=manage_fab
     )
     
     marker_layer = map.MarkerLayer(markers=[])
@@ -36,7 +36,7 @@ def main(page: ft.Page):
             ft.Container(
                 map.Map(
                     expand=True,
-                    initial_center= map.MapLatitudeLongitude(34,58),
+                    initial_center= map.MapLatitudeLongitude(-64,58),
                     initial_zoom= 3,
                     on_init=lambda e: print("New Map"),
                     on_tap=manage_map_tap,
@@ -47,21 +47,39 @@ def main(page: ft.Page):
                             on_image_error= lambda e: print(e)),
                         
                         marker_layer,
-                        #map.MarkerLayer(ref= marker_layer, markers=[])  
                         map.SimpleAttribution(
                             text='By QiMono. ',
+                            bgcolor=ft.colors.BLUE_GREY_50,
                             alignment= ft.alignment.bottom_left ,
                             on_click=lambda e: e.page.launch_url('https://qimono76.wordpress.com'),
 
                             ),
+                        map.PolylineLayer(
+                            polylines=[
+                                map.PolylineMarker(
+                                    border_stroke_width=3,
+                                    border_color= ft.colors.PINK,
+                                    # gradient_colors=[ft.colors.BLACK, ft.colors.BLACK],
+                                    # color=ft.Colors.with_opacity(0.6, ft.colors.GREEN), 
+                                    coordinates=[
+                                        map.MapLatitudeLongitude(-32.9,-60.9),
+                                        map.MapLatitudeLongitude(-34.9,-67.6),
+                                        map.MapLatitudeLongitude(-38.9,-68.1),
+                                        ]
+                                    )
+                                ]
+                            ),
+
                         # map.RichAttribution(
-                        #     attributions=[
-                        #         map.TextSourceAttribution(
-                        #             text='Powered by QiMono(TM)',
-                        #             on_click=lambda e: e.page.launch_url('https://qimono76.wordpress.com'),
-                        #             ),
-                        #         ],
-                        #     )
+                        #     alignment= ft.alignment.button_left,
+                            # attributions=[
+                            #     map.TextSourceAttribution(
+                            #         prepend_copyright = False,
+                            #         text='Powered by QiMono(TM)',
+                            #         on_click=lambda e: e.page.launch_url('https://qimono76.wordpress.com'),
+                            #         ),
+                            #     ],
+                            # )
                         ],
                     ),
                 alignment=ft.alignment.center_left,
