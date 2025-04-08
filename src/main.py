@@ -1,17 +1,55 @@
 import flet as ft
 from flet.core.map.marker_layer import Marker
 import flet.map as map
+from datetime import datetime
+import os
+import asyncio
 
-def main(page: ft.Page):
+async def main(page: ft.Page):
+    map_container_ref = ft.Ref[ft.Container]()
+    marker_layer = map.MarkerLayer(markers=[])
+    route_layer = map.PolylineLayer(polylines=[])
 
-    def manage_fab(e):
+    async def take_screenshot():
+        try:
+            os.makedirs("screenshots", exist_ok=True)
+            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+            filename = f"screenshots/map_{timestamp}.png"
+
+
+            # page.snack_bar= ft.SnackBar(ft.Text(f'Compartir Rutas'), action='OK')
+            # page.snack_bar.open = True
+            
+            # page.snack_bar = ft.SnackBar(ft.Text(f"Compartir Rutas"),action="OK")
+            # 
+            # page.snack_bar.open = True
+            
+
+            # await map_container_ref.current.screenshot_async(filename=filename)
+
+            # await page.screenshot_async(filename=filename, control=map_container_ref.current)
+            
+            # await asyncio.to_thread(lambda: page.screenshot(filename=filename, source= map_container_ref.current))
+        
+            # page.take_screenshot(filename=filename, source= map_container_ref.current)
+
+            print('SCREENSHOT')
+            page.update()
+        except Exception as e:
+            print('EXCEPTION', e)
+            # page.snack_bar= ft.SnackBar(ft.Text(f'Error {str(e)}'), action='OK')
+            # page.snack_bar.open = True
+            #await page.update()
+
+    async def manage_fab(e):
             print('FAB')
+            await take_screenshot()
 
     page.floating_action_button = ft.FloatingActionButton(
         icon=ft.Icons.AIRPLAY, on_click=manage_fab
     )
     
-    marker_layer = map.MarkerLayer(markers=[])
+    # marker_layer = map.MarkerLayer(markers=[])
     circle_layer_ref = ft.Ref[map.CircleLayer]()
 
     def manage_map_tap(e: map.MapTapEvent):
@@ -26,67 +64,53 @@ def main(page: ft.Page):
                         coordinates= e.coordinates,
                         )
                     )
+            coordinates = [marker.coordinates for marker in marker_layer.markers]
+                        
+            if len(coordinates) >= 2:
+                route_layer.polylines = [
+                    map.PolylineMarker(
+                    border_stroke_width=3,
+                    border_color=ft.colors.PINK,
+                    coordinates=coordinates
+                    )
+                ]
+            else:
+                route_layer.polylines = []
             page.update()
     
     def handle_map_event(e: map.MapEvent):
         print(e)
 
-    page.add(
-        ft.SafeArea(
-            ft.Container(
-                map.Map(
-                    expand=True,
-                    initial_center= map.MapLatitudeLongitude(-64,58),
-                    initial_zoom= 3,
-                    on_init=lambda e: print("New Map"),
-                    on_tap=manage_map_tap,
-                    #on_event= handle_map_event,
-                    layers=[
-                        map.TileLayer(
-                            url_template="https://tile.openstreetmap.org/{z}/{x}/{y}.png",
-                            on_image_error= lambda e: print(e)),
-                        
-                        marker_layer,
-                        map.SimpleAttribution(
-                            text='By QiMono. ',
-                            bgcolor=ft.colors.BLUE_GREY_50,
-                            alignment= ft.alignment.bottom_left ,
-                            on_click=lambda e: e.page.launch_url('https://qimono76.wordpress.com'),
-
-                            ),
-                        map.PolylineLayer(
-                            polylines=[
-                                map.PolylineMarker(
-                                    border_stroke_width=3,
-                                    border_color= ft.colors.PINK,
-                                    # gradient_colors=[ft.colors.BLACK, ft.colors.BLACK],
-                                    # color=ft.Colors.with_opacity(0.6, ft.colors.GREEN), 
-                                    coordinates=[
-                                        map.MapLatitudeLongitude(-32.9,-60.9),
-                                        map.MapLatitudeLongitude(-34.9,-67.6),
-                                        map.MapLatitudeLongitude(-38.9,-68.1),
-                                        ]
-                                    )
-                                ]
-                            ),
-
-                        # map.RichAttribution(
-                        #     alignment= ft.alignment.button_left,
-                            # attributions=[
-                            #     map.TextSourceAttribution(
-                            #         prepend_copyright = False,
-                            #         text='Powered by QiMono(TM)',
-                            #         on_click=lambda e: e.page.launch_url('https://qimono76.wordpress.com'),
-                            #         ),
-                            #     ],
-                            # )
-                        ],
-                    ),
-                alignment=ft.alignment.center_left,
-            ),
+    # page.add(
+    #     ft.SafeArea(
+    map_container=ft.Container(
+        map.Map(
             expand=True,
-        )
-     )
+            initial_center= map.MapLatitudeLongitude(-64,58),
+            initial_zoom= 3,
+            on_init=lambda e: print("New Map"),
+            on_tap=manage_map_tap,
+            ref= map_container_ref,
+            #on_event= handle_map_event,
+            layers=[
+                map.TileLayer(
+                    url_template="https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                    on_image_error= lambda e: print(e)),
+                
+                marker_layer,
+                map.SimpleAttribution(
+                    text='By QiMono. ',
+                    bgcolor=ft.colors.BLUE_GREY_50,
+                    alignment= ft.alignment.bottom_left ,
+                    on_click=lambda e: e.page.launch_url('https://qimono76.wordpress.com'),
 
+                    ),
+                route_layer,
+                ],
+            ),
+            alignment=ft.alignment.center_left,
+        )
+
+    page.add(ft.SafeArea(map_container, expand= True))
 
 ft.app(main)
