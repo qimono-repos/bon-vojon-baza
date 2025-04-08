@@ -1,48 +1,51 @@
 import flet as ft
+from flet.core.map.marker_layer import Marker
 import flet.map as map
 
 def main(page: ft.Page):
-    def manage_tap(e: map.MapTapEvent):
+
+    def manage_fab(e):
+            print('FAB')
+
+    page.floating_action_button = ft.FloatingActionButton(
+        icon=ft.Icons.ADD, on_click=manage_fab
+    )
+    
+    marker_layer = map.MarkerLayer(markers=[])
+    circle_layer_ref = ft.Ref[map.CircleLayer]()
+
+    def manage_map_tap(e: map.MapTapEvent):
+        #marker_layer_ref.current.markers = []
+        print(e)
+        if e.name == 'tap':
+            marker_layer.markers.append(
+                    map.Marker(
+                        content= ft.Icon(
+                            ft.Icons.LOCATION_ON, color= ft.cupertino_colors.DESTRUCTIVE_RED 
+                            ),
+                        coordinates= e.coordinates,
+                        )
+                    )
+            page.update()
+    
+    def handle_map_event(e: map.MapEvent):
         print(e)
 
     page.add(
-            # map.Map(
-            #     expand=True,
-            #     on_init=lambda e: print("Map Init"),
-            #     on_tap=manage_tap,
-            #     layers=[
-            #         map.TileLayer(
-            #             url_template="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
-            #             )
-            #         ]
-            #     )
-            # )
-
-# counter = ft.Text("0", size=75, data=1337)
-
-    # def increment_click(e):
-    #     counter.data += 1
-    #     counter.value = str(counter.data)
-    #     counter.update()
-
-    # page.floating_action_button = ft.FloatingActionButton(
-    #     icon=ft.Icons.ADD, on_click=increment_click
-    # )
-    # page.add(
         ft.SafeArea(
             ft.Container(
-
                 map.Map(
                     expand=True,
-                    on_init=lambda e: print("Map Init"),
-                    on_tap=manage_tap,
+                    initial_center= map.MapLatitudeLongitude(34,58),
+                    initial_zoom= 4.5,
+                    on_init=lambda e: print("New Map"),
+                    on_tap=manage_map_tap,
                     layers=[
-                        map.TileLayer(
-                            url_template="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
-                            )
-                        ]
+                        map.TileLayer(url_template="https://tile.openstreetmap.org/{z}/{x}/{y}.png"),
+                        marker_layer 
+                        ],
+                        
                     ),
-                # counter,
                 alignment=ft.alignment.center_left,
             ),
             expand=True,
