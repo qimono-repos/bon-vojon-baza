@@ -121,8 +121,8 @@ async def main(page: ft.Page):
     map_container=ft.Container(
         map.Map(
             expand=True,
-            initial_center= map.MapLatitudeLongitude(-64,-30),
-            initial_zoom= 3,
+            initial_center= map.MapLatitudeLongitude(-44,-65),
+            initial_zoom= 4.75,
             on_init=lambda e: print("New Map"),
             on_tap=manage_map_tap,
             ref= map_container_ref,
