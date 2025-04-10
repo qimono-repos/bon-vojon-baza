@@ -70,7 +70,7 @@
     previews = {
       enable = true;
       previews = {
-        web = {
+        android = {
           # cwd = "subfolder"
           command = [
             "bash"
@@ -80,7 +80,7 @@
             source $VENV_DIR/bin/activate
             
             # run app in hot reload mode on a port provided by IDX
-            flet run $MAIN_FILE --web --port $PORT
+            # flet run --android
             ''
           ];
           env = { PORT = "$PORT"; };
