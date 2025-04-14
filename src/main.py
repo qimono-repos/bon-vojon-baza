@@ -1,152 +1,124 @@
 import flet as ft
-from flet.core.map.marker_layer import Marker
-import flet.map as map
-from datetime import datetime
-import os
-import asyncio
 import json
-from pathlib import Path 
+from datetime import datetime
+from pathlib import Path
 
-async def main(page: ft.Page):
-    map_container_ref = ft.Ref[ft.Container]()
-    marker_layer = map.MarkerLayer(markers=[])
-    route_layer = map.PolylineLayer(polylines=[])
-    save_path = None 
-    circle_layer_ref = ft.Ref[map.CircleLayer]()
+class MapControl(ft.Control):
+    def __init__(self):
+        super().__init__()
+        self.markers = []
+        self.polylines = []
+        self._map_initialized = False
 
-    async def take_screenshot():
-        try:
-            os.makedirs("screenshots", exist_ok=True)
-            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-            filename = f"screenshots/map_{timestamp}.png"
+    def _init_map(self):
+        self.page.web.execute_js_async(f"""
+            const map = L.map('map_{self.uid}').setView([-44, -65], 4.75);
+            L.tileLayer('https://tile.openstreetmap.org/{{z}}/{{x}}/{{y}}.png').addTo(map);
 
-            # page.snack_bar= ft.SnackBar(ft.Text(f'Compartir Rutas'), action='OK')
-            # page.snack_bar.open = True
-            # await map_container_ref.current.screenshot_async(filename=filename)
-            # await page.screenshot_async(filename=filename, control=map_container_ref.current)
-            # await asyncio.to_thread(lambda: page.screenshot(filename=filename, source= map_container_ref.current))
-            # page.take_screenshot(filename=filename, source= map_container_ref.current)
+            window.map_{self.uid} = map;
+            window.markers_{self.uid} = [];
+            window.polylines_{self.uid} = null;
 
-            print('SCREENSHOT')
-            page.update()
-        except Exception as e:
-            print('EXCEPTION: taking screenshot ', e)
+            map.on('click', (e) => {{
+                const event = {{
+                    type: 'map_click',
+                    latlng: e.latlng,
+                        control_id: '{self.uid}'
+                }};
+                window.handleMapEvent(JSON.stringify(event));
+            }});
+        """)
+        self._map_initialized = True
 
-    async def manage_fab(e):
-            print('FAB')
-            await take_screenshot()
+    def update_markers(self):
+        if not self._map_initialized:
+            return
 
-    page.floating_action_button = ft.FloatingActionButton(
-        icon=ft.Icons.AIRPLAY, on_click=manage_fab
-    )
+        self.page.web.execute_js_async(f"""
+            window.markers_{self.uid}.forEach(marker => map_{self.uid}.removeLayer(marker));
+            window.markers_{self.uid} = [];
+
+            {self._generate_marker_js()}
+            if(window.polylines_{self.uid}) {{
+                map_{self.uid}.removeLayer(window.polylines_{self.uid});
+            }}
+            {self._generate_polyline_js()}
+        """)
     
-    async def get_save_path():
-        nonlocal save_path
-        if save_path is None:
-            downloads_dir = str(Path.home() / "Documents")
-        os.makedirs(str(Path.home() / 'Documents'), exist_ok=True)
-        save_path= os.path.join(str(Path.home() / 'Documents'), 'qimono_document.json')
-        # save_path= os.path.join(downloads_dir, 'qimono_document.json')
-        return save_path 
+    def _generate_marker_js(self):
+        return "\n".join([
+            f"""const marker_{i} = L.marker([{m['lat']}, {m['lng']}]).addTo(map_{self.uid});
+            f"window.markers_{self.uid}.push(marker_{i});"""
+            for i, m in enumerate(self.markers)
+        ])
 
-    def update_polyline():
-        coordinates= [m.coordinates for m in marker_layer.markers]
+    def _generate_polyline_js(self):
+        if len(self.markers) < 2:
+            return ""
 
-        if len(coordinates) >= 2:
-            route_layer.polylines = [
-                map.PolylineMarker(
-                border_stroke_width=3,
-                border_color=ft.colors.PINK,
-                coordinates=coordinates
-                )
-            ]
-        else:
-            route_layer.polylines = []
+        coords = ",".join([f"[{m['lat']}, {m['lng']}]" for m in self.markers])
+        return f"""
+            window.polylines_{self.uid} = L.polyline([{coords}], {{color: '#ff69b4'}}).addTo(map_{self.uid});
+        """
 
-    async def save_markers():
+def main(page: ft.Page):
+    page.title = "Bon Vojojn Baza"
+    page.theme_mode = ft.ThemeMode.DARK
+    page.padding = 0
+
+    map_control = MapControl()
+
+    def load_markers():
         try:
-            file_path = await get_save_path()
-            markers_list = [{
-                "latitude": marker.coordinates.latitude,
-                "longitude": marker.coordinates.longitude } for marker in marker_layer.markers ]
-            with open(file_path, 'w') as f: 
-                json.dump(markers_list, f)
-            print(f'Markers saved to {file_path }')
-
+            save_path = Path.home() / "Documents" / "qimono_routes.json"
+            if save_path.exists():
+                with open(save_path, "r") as f:
+                    map_control.markers = json.load(f)
+                map_control.update_markers()
         except Exception as e:
-            print('ERROR saving maker ', e)
+            print(f"Load error: {e}")
 
-    async def load_markers():
-        try:
-            file_path= await get_save_path()
-            if os.path.exists(file_path):
-                with open(file_path, 'r') as f: 
-                    markers_list= json.load(f)
-
-                marker_layer.markers.clear()
-                for item in markers_list:
-                    marker_layer.markers.append(
-                        map.Marker(
-                            content= ft.Icon(ft.icons.LOCATION_ON, color= ft.colors.RED),
-                            coordinates= map.MapLatitudeLongitude(item['latitude'], item['longitude'])
-                        )
-                    )
-                update_polyline()
-                page.update()
-
+    def save_markers(e):
+        try:            
+            save_path = Path.home() / "Documents" / "qimono_routes.json"
+            with open(save_path, "w") as f:
+                json.dump(map_control.markers, f)
+            print("Markers saved!")
         except Exception as e:
-            print('ERROR loading markers: ',e)
+            print(f"Save failed: {e}")
 
-    async def manage_map_tap(e: map.MapTapEvent):
-        #marker_layer_ref.current.markers = []
-        print(e)
-        if e.name == 'tap':
-            marker_layer.markers.append(
-                    map.Marker(
-                        content= ft.Icon(
-                            ft.Icons.LOCATION_ON, color= ft.cupertino_colors.DESTRUCTIVE_RED 
-                            ),
-                        coordinates= e.coordinates,
-                        )
-                    )
-            update_polyline()
-            await save_markers()
+    def handle_map_event(e: ft.JsEvent):
+        data = json.loads(e.data)
+        if data['type'] == 'map_click' and data.get('control_id') == map_control.uid:
+            map_control.markers.append({
+                "lat": data['latlng']['lat'],
+                "lng": data['latlng']['lng']
+            })
+            map_control.update_markers()
             page.update()
-    
-    def handle_map_event(e: map.MapEvent):
-        print(e)
 
-    # page.add(
-    #     ft.SafeArea(
-    map_container=ft.Container(
-        map.Map(
-            expand=True,
-            initial_center= map.MapLatitudeLongitude(-44,-65),
-            initial_zoom= 4.75,
-            on_init=lambda e: print("New Map"),
-            on_tap=manage_map_tap,
-            ref= map_container_ref,
-            #on_event= handle_map_event,
-            layers=[
-                map.TileLayer(
-                    url_template="https://tile.openstreetmap.org/{z}/{x}/{y}.png",
-                    on_image_error= lambda e: print(e)),
-                
-                marker_layer,
-                map.SimpleAttribution(
-                    text='By QiMono. ',
-                    bgcolor=ft.colors.BLUE_GREY_50,
-                    alignment= ft.alignment.bottom_left ,
-                    on_click=lambda e: e.page.launch_url('https://qimono76.wordpress.com'),
-
-                    ),
-                route_layer,
-                ],
+    page.add(
+        ft.Stack([
+            ft.Container(
+                content=map_control,
+                expand=True
             ),
-            alignment=ft.alignment.center_left,
-        )
+            ft.FloatingActionButton(
+                icon=ft.icons.SAVE,
+                on_click=save_markers,
+                bottom=20,
+                right=20
+            )
+        ])
+    )
 
-    await load_markers()
-    page.add(ft.SafeArea(map_container, expand= True))
+    map_control._init_map()
+    load_markers()
 
-ft.app(main)
+    page.web.register_js_event_handler_async(
+        event_name="handleMapEvent",
+        handler=handle_map_event
+    )
+
+    ft.app(target=main)
+    #ft.app(target=main, view=ft.WEB_BROWSER)
