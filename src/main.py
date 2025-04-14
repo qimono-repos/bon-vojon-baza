@@ -62,6 +62,19 @@ class MapControl(ft.Control):
         """
 
 def main(page: ft.Page):
+   
+    page.platform = ft.PagePlatform.ANDROID
+    page.web_renderer = ft.WebRenderer.CANVAS_KIT
+
+    debug = ft.Text("Init...", color="red", size=24)
+    page.add(debug)
+
+    # try:
+    #     page.update()
+    # except Exception as e:
+    #     debug.value = f"CRASH: {str(e)}"
+    # raise
+
     page.title = "Bon Vojojn Baza"
     page.theme_mode = ft.ThemeMode.DARK
     page.padding = 0
@@ -111,14 +124,21 @@ def main(page: ft.Page):
             )
         ])
     )
+    try:
+        map_control._init_map()
+        load_markers()
 
-    map_control._init_map()
-    load_markers()
+        page.web.register_js_event_handler_async("handleMapEvent", handle_map_event)
 
-    page.web.register_js_event_handler_async(
-        event_name="handleMapEvent",
-        handler=handle_map_event
-    )
+        # page.web.register_js_event_handler_async(
+        #     event_name="handleMapEvent",
+        #     handler=handle_map_event
+        # )
 
-    ft.app(target=main)
+        ft.app(target=main)
     #ft.app(target=main, view=ft.WEB_BROWSER)
+
+    except Exception as e:
+        debug.value = f"CRASH: {str(e)}"
+    raise
+
