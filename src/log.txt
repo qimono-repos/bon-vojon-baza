@@ -1,0 +1,767 @@
+Creating Flutter bootstrap project...OK
+Customizing app icons and splash images...OK
+Generating app icons...OK
+Generating splash screens...OK
+Packaging Python app...OK
+Building .apk for Android...Resolving dependencies...
+Downloading packages...
+  archive 3.6.1 (4.0.5 available)
+  async 2.12.0 (2.13.0 available)
+  characters 1.3.0 (1.4.0 available)
+  collection 1.19.0 (1.19.1 available)
+  fake_async 1.3.2 (1.3.3 available)
+  ffi 2.1.3 (2.1.4 available)
+  file_picker 8.0.7 (10.1.2 available)
+  fl_chart 0.65.0 (0.70.2 available)
+  flet 0.22.1 (0.27.6 available)
+  flet_video 0.22.1 (0.25.2 available)
+  flutter_launcher_icons 0.13.1 (0.14.3 available)
+  flutter_lints 2.0.3 (5.0.0 available)
+  flutter_markdown 0.6.23 (0.7.7 available)
+  flutter_native_splash 2.4.4 (2.4.6 available)
+  image 4.3.0 (4.5.4 available)
+  intl 0.19.0 (0.20.2 available)
+  js 0.6.7 (0.7.2 available)
+  leak_tracker 10.0.8 (10.0.9 available)
+  lints 2.1.1 (5.1.1 available)
+  matcher 0.12.16+1 (0.12.17 available)
+  material_color_utilities 0.11.1 (0.12.0 available)
+  media_kit 1.1.11 (1.2.0 available)
+  media_kit_video 1.2.5 (1.3.0 available)
+  meta 1.15.0 (1.16.0 available)
+  petitparser 6.0.2 (6.1.0 available)
+  safe_local_storage 1.0.2 (2.0.1 available)
+  screen_brightness 0.2.2+1 (2.1.2 available)
+  screen_brightness_android 0.1.0+2 (2.1.1 available)
+  screen_brightness_ios 0.1.0 (2.1.1 available)
+  screen_brightness_macos 0.1.0+1 (2.1.1 available)
+  screen_brightness_platform_interface 0.1.0 (2.1.0 available)
+  screen_brightness_windows 0.1.3 (2.1.0 available)
+  screen_retriever 0.1.9 (0.2.0 available)
+  sensors_plus 4.0.2 (6.1.1 available)
+  sensors_plus_platform_interface 1.2.0 (2.0.1 available)
+  serious_python 0.7.1 (0.9.2 available)
+  serious_python_android 0.7.1 (0.9.2 available)
+  serious_python_darwin 0.7.1 (0.9.2 available)
+  serious_python_linux 0.7.1 (0.9.2 available)
+  serious_python_platform_interface 0.7.1 (0.9.2 available)
+  serious_python_windows 0.7.1 (0.9.2 available)
+  source_span 1.10.0 (1.10.1 available)
+  stack_trace 1.12.0 (1.12.1 available)
+  stream_channel 2.1.2 (2.1.4 available)
+  string_scanner 1.4.0 (1.4.1 available)
+  synchronized 3.3.0+3 (3.3.1 available)
+  term_glyph 1.2.1 (1.2.2 available)
+  test_api 0.7.3 (0.7.4 available)
+  toml 0.15.0 (0.16.0 available)
+  uri_parser 2.0.2 (3.0.0 available)
+  url_strategy 0.2.0 (discontinued)
+  vm_service 14.3.1 (15.0.0 available)
+  volume_controller 2.0.8 (3.3.3 available)
+  web 0.5.1 (1.1.1 available)
+  web_socket_channel 2.4.5 (3.0.2 available)
+  win32 5.10.1 (5.12.0 available)
+  window_manager 0.3.9 (0.4.3 available)
+Got dependencies!
+1 package is discontinued.
+57 packages have newer versions incompatible with dependency constraints.
+Try `flutter pub outdated` for more information.
+
+Running Gradle task 'assembleRelease'...                        
+Downloading file from: https://github.com/media-kit/libmpv-android-video-build/releases/download/v1.1.5/default-arm64-v8a.jar
+Downloading file from: https://github.com/media-kit/libmpv-android-video-build/releases/download/v1.1.5/default-armeabi-v7a.jar
+Downloading file from: https://github.com/media-kit/libmpv-android-video-build/releases/download/v1.1.5/default-x86_64.jar
+Downloading file from: https://github.com/media-kit/libmpv-android-video-build/releases/download/v1.1.5/default-x86.jar
+Running Gradle task 'assembleRelease'...                           38.5s
+
+┌─ Flutter Fix ────────────────────────────────────────────────────────────────────────────────┐
+│ [!] Your project requires a newer version of the Kotlin Gradle plugin.                       │
+│ Find the latest version on https://kotlinlang.org/docs/releases.html#release-details, then   │
+│ update the                                                                                   │
+│ version number of the plugin with id "org.jetbrains.kotlin.android" in the plugins block of  │
+│ /tmp/flet_flutter_build_WRUYrpdPqN/android/settings.gradle.                                  │
+│                                                                                              │
+│ Alternatively (if your project was created before Flutter 3.19), update                      │
+│ /tmp/flet_flutter_build_WRUYrpdPqN/android/build.gradle                                      │
+│ ext.kotlin_version = '<latest-version>'                                                      │
+└──────────────────────────────────────────────────────────────────────────────────────────────┘
+
+Warning: Flutter support for your project's Android Gradle Plugin version (7.3.0) will soon be dropped. Please upgrade your Android Gradle Plugin version to a version of at least 7.3.1 
+soon.
+Alternatively, use the flag "--android-skip-build-dependency-validation" to bypass this check.
+
+Potential fix: Your project's AGP version is typically defined in the plugins block of the `settings.gradle` file (/tmp/flet_flutter_build_WRUYrpdPqN/android/settings.gradle), by a 
+plugin with the id of com.android.application. 
+If you don't see a plugins block, your project was likely created with an older template version. In this case it is most likely defined in the top-level build.gradle file 
+(/tmp/flet_flutter_build_WRUYrpdPqN/android/build.gradle) by the following line in the dependencies block of the buildscript: "classpath 'com.android.tools.build:gradle:<version>'".
+
+Warning: Flutter support for your project's Kotlin version (1.7.10) will soon be dropped. Please upgrade your Kotlin version to a version of at least 1.8.10 soon.
+Alternatively, use the flag "--android-skip-build-dependency-validation" to bypass this check.
+
+Potential fix: Your project's KGP version is typically defined in the plugins block of the `settings.gradle` file (/tmp/flet_flutter_build_WRUYrpdPqN/android/settings.gradle), by a 
+plugin with the id of org.jetbrains.kotlin.android. 
+If you don't see a plugins block, your project was likely created with an older template version, in which case it is most likely defined in the top-level build.gradle file 
+(/tmp/flet_flutter_build_WRUYrpdPqN/android/build.gradle) by the ext.kotlin_version property.
+
+Note: /home/user/.pub-cache/hosted/pub.dev/media_kit_video-1.2.5/android/src/main/java/com/alexmercerind/media_kit_video/VideoOutput.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+/home/user/.androidsdkroot/ndk/23.1.7779620/toolchains/llvm/prebuilt/linux-x86_64/bin/llvm-strip: error: 
+'/tmp/flet_flutter_build_WRUYrpdPqN/build/serious_python_android/intermediates/merged_native_libs/release/out/lib/arm64-v8a/libpythonbundle.so': The file was not recognized as a valid 
+object file
+
+/home/user/.androidsdkroot/ndk/23.1.7779620/toolchains/llvm/prebuilt/linux-x86_64/bin/llvm-strip: error: 
+'/tmp/flet_flutter_build_WRUYrpdPqN/build/serious_python_android/intermediates/merged_native_libs/release/out/lib/armeabi-v7a/libpythonbundle.so': The file was not recognized as a valid 
+object file
+
+/home/user/.androidsdkroot/ndk/23.1.7779620/toolchains/llvm/prebuilt/linux-x86_64/bin/llvm-strip: error: 
+'/tmp/flet_flutter_build_WRUYrpdPqN/build/serious_python_android/intermediates/merged_native_libs/release/out/lib/x86_64/libpythonbundle.so': The file was not recognized as a valid 
+object file
+
+e: Incompatible classes were found in dependencies. Remove them from the classpath or use '-Xskip-metadata-version-check' to suppress errors
+e: /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/META-INF/kotlin-stdlib-jdk7.kotlin_module: Module was compiled 
+with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+e: /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/META-INF/kotlin-stdlib-jdk8.kotlin_module: Module was compiled 
+with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+e: /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/META-INF/kotlin-stdlib.kotlin_module: Module was compiled with 
+an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (6, 7): Class 'kotlin.Suppress' 
+was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Suppress.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (19, 10): Unresolved reference: 
+listOf
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (24, 5): Unresolved reference: 
+listOf
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (26, 5): Unresolved reference: 
+listOf
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (27, 19): Unresolved reference: 
+javaClass
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (57, 23): Unresolved reference: 
+firstOrNull
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (57, 37): Unresolved reference: 
+it
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (73, 12): Unresolved reference: 
+listOf
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (96, 12): Unresolved reference: 
+listOf
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (107, 46): Unresolved reference:
+let
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (107, 85): Unresolved reference:
+it
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (110, 52): Unresolved reference:
+let
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (111, 51): Unresolved reference:
+it
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (115, 52): Unresolved reference:
+let
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (115, 84): Unresolved reference:
+it
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (122, 5): Class 'kotlin.Unit' 
+was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (124, 16): Class 'kotlin.Unit' 
+was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (125, 9): Class 'kotlin.Unit' 
+was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (128, 16): Class 'kotlin.Unit' 
+was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (129, 9): Class 'kotlin.Unit' 
+was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (132, 16): Class 'kotlin.Unit' 
+was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (133, 9): Class 'kotlin.Unit' 
+was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (135, 21): Class 'kotlin.Unit' 
+was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (186, 38): Unresolved reference:
+lazy
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (191, 6): Class 
+'kotlin.jvm.JvmOverloads' was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/jvm/JvmOverloads.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (198, 36): Unresolved reference:
+isNotEmpty
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (200, 7): Unresolved reference: 
+run
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (207, 9): Class 'kotlin.Unit' 
+was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (208, 19): Class 'kotlin.Unit' 
+was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (215, 23): Class 'kotlin.Unit' 
+was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (216, 19): Unresolved reference:
+listOf
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (220, 19): Class 'kotlin.Unit' 
+was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (223, 19): Class 'kotlin.Unit' 
+was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (226, 7): Unresolved reference: 
+run
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (233, 9): Class 'kotlin.Unit' 
+was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (234, 19): Class 'kotlin.Unit' 
+was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (241, 23): Class 'kotlin.Unit' 
+was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (242, 19): Unresolved reference:
+listOf
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (246, 19): Class 'kotlin.Unit' 
+was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (249, 19): Class 'kotlin.Unit' 
+was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (252, 7): Unresolved reference: 
+run
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (259, 9): Class 'kotlin.Unit' 
+was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (260, 19): Class 'kotlin.Unit' 
+was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (267, 23): Class 'kotlin.Unit' 
+was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (268, 19): Unresolved reference:
+listOf
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (272, 19): Class 'kotlin.Unit' 
+was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (275, 19): Class 'kotlin.Unit' 
+was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (278, 7): Unresolved reference: 
+run
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (285, 9): Class 'kotlin.Unit' 
+was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (286, 19): Class 'kotlin.Unit' 
+was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (293, 23): Class 'kotlin.Unit' 
+was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (294, 19): Unresolved reference:
+listOf
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (298, 19): Class 'kotlin.Unit' 
+was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (301, 19): Class 'kotlin.Unit' 
+was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (304, 7): Unresolved reference: 
+run
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (311, 9): Class 'kotlin.Unit' 
+was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (312, 19): Class 'kotlin.Unit' 
+was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (319, 23): Class 'kotlin.Unit' 
+was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (320, 19): Unresolved reference:
+listOf
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (324, 19): Class 'kotlin.Unit' 
+was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (327, 19): Class 'kotlin.Unit' 
+was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (330, 7): Unresolved reference: 
+run
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (337, 9): Class 'kotlin.Unit' 
+was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (338, 19): Class 'kotlin.Unit' 
+was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (345, 23): Class 'kotlin.Unit' 
+was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (346, 19): Unresolved reference:
+listOf
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (350, 19): Class 'kotlin.Unit' 
+was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (353, 19): Class 'kotlin.Unit' 
+was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (356, 7): Unresolved reference: 
+run
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (363, 9): Class 'kotlin.Unit' 
+was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (364, 19): Class 'kotlin.Unit' 
+was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (370, 19): Unresolved reference:
+listOf
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (374, 19): Class 'kotlin.Unit' 
+was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (377, 19): Class 'kotlin.Unit' 
+was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (380, 7): Unresolved reference: 
+run
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (387, 9): Class 'kotlin.Unit' 
+was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (388, 19): Class 'kotlin.Unit' 
+was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (394, 19): Unresolved reference:
+listOf
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (398, 19): Class 'kotlin.Unit' 
+was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (401, 19): Class 'kotlin.Unit' 
+was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (404, 7): Unresolved reference: 
+run
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (411, 9): Class 'kotlin.Unit' 
+was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (412, 19): Class 'kotlin.Unit' 
+was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (418, 19): Unresolved reference:
+listOf
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (422, 19): Class 'kotlin.Unit' 
+was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (425, 19): Class 'kotlin.Unit' 
+was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (428, 7): Unresolved reference: 
+run
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (435, 9): Class 'kotlin.Unit' 
+was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (436, 19): Class 'kotlin.Unit' 
+was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (442, 19): Unresolved reference:
+listOf
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (446, 19): Class 'kotlin.Unit' 
+was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (449, 19): Class 'kotlin.Unit' 
+was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (452, 7): Unresolved reference: 
+run
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (459, 9): Class 'kotlin.Unit' 
+was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (460, 19): Class 'kotlin.Unit' 
+was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (466, 19): Unresolved reference:
+listOf
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (470, 19): Class 'kotlin.Unit' 
+was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (473, 19): Class 'kotlin.Unit' 
+was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (476, 7): Unresolved reference: 
+run
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (483, 9): Class 'kotlin.Unit' 
+was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (484, 19): Class 'kotlin.Unit' 
+was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (490, 19): Unresolved reference:
+listOf
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (494, 19): Class 'kotlin.Unit' 
+was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (497, 19): Class 'kotlin.Unit' 
+was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (500, 7): Unresolved reference: 
+run
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (507, 9): Class 'kotlin.Unit' 
+was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (508, 19): Class 'kotlin.Unit' 
+was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (514, 23): Class 'kotlin.Unit' 
+was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (515, 19): Unresolved reference:
+listOf
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (519, 19): Class 'kotlin.Unit' 
+was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (522, 19): Class 'kotlin.Unit' 
+was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (525, 7): Unresolved reference: 
+run
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (532, 9): Class 'kotlin.Unit' 
+was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (533, 19): Class 'kotlin.Unit' 
+was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (539, 19): Unresolved reference:
+listOf
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (543, 19): Class 'kotlin.Unit' 
+was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (546, 19): Class 'kotlin.Unit' 
+was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (549, 7): Unresolved reference: 
+run
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (556, 9): Class 'kotlin.Unit' 
+was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (557, 19): Class 'kotlin.Unit' 
+was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (563, 19): Unresolved reference:
+listOf
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (567, 19): Class 'kotlin.Unit' 
+was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/MessagesAsync.g.kt: (570, 19): Class 'kotlin.Unit' 
+was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/SharedPreferencesPlugin.kt: (42, 5): Class 
+'kotlin.properties.ReadOnlyProperty' was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/properties/ReadOnlyProperty.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/SharedPreferencesPlugin.kt: (42, 5): Class 
+'kotlin.reflect.KProperty' was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/reflect/KProperty.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/SharedPreferencesPlugin.kt: (53, 10): Class 
+'kotlin.Unit' was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/SharedPreferencesPlugin.kt: (57, 10): Class 
+'kotlin.Unit' was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/SharedPreferencesPlugin.kt: (59, 33): Class 
+'kotlin.Unit' was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/SharedPreferencesPlugin.kt: (60, 7): Class 
+'kotlin.Unit' was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/SharedPreferencesPlugin.kt: (67, 5): Class 
+'kotlin.Unit' was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/SharedPreferencesPlugin.kt: (68, 37): Class 
+'kotlin.Unit' was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/SharedPreferencesPlugin.kt: (72, 31): Class 
+'kotlin.Unit' was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/SharedPreferencesPlugin.kt: (73, 14): Class 
+'kotlin.Unit' was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/SharedPreferencesPlugin.kt: (74, 5): Class 
+'kotlin.Unit' was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/SharedPreferencesPlugin.kt: (79, 12): Class 
+'kotlin.Unit' was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/SharedPreferencesPlugin.kt: (79, 12): Class 
+'kotlin.coroutines.CoroutineContext' was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/coroutines/CoroutineContext.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/SharedPreferencesPlugin.kt: (81, 64): Class 
+'kotlin.Unit' was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/SharedPreferencesPlugin.kt: (87, 12): Class 
+'kotlin.Unit' was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/SharedPreferencesPlugin.kt: (87, 12): Class 
+'kotlin.coroutines.CoroutineContext' was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/coroutines/CoroutineContext.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/SharedPreferencesPlugin.kt: (87, 26): Class 
+'kotlin.Unit' was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/SharedPreferencesPlugin.kt: (92, 62): Class 
+'kotlin.Unit' was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/SharedPreferencesPlugin.kt: (97, 12): Class 
+'kotlin.Unit' was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/SharedPreferencesPlugin.kt: (97, 12): Class 
+'kotlin.coroutines.CoroutineContext' was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/coroutines/CoroutineContext.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/SharedPreferencesPlugin.kt: (99, 64): Class 
+'kotlin.Unit' was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/SharedPreferencesPlugin.kt: (105, 12): Class 
+'kotlin.Unit' was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/SharedPreferencesPlugin.kt: (105, 12): Class 
+'kotlin.coroutines.CoroutineContext' was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/coroutines/CoroutineContext.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/SharedPreferencesPlugin.kt: (107, 64): Class 
+'kotlin.Unit' was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/SharedPreferencesPlugin.kt: (117, 12): Class 
+'kotlin.Unit' was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/SharedPreferencesPlugin.kt: (117, 12): Class 
+'kotlin.coroutines.CoroutineContext' was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/coroutines/CoroutineContext.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/SharedPreferencesPlugin.kt: (117, 26): Class 
+'kotlin.Unit' was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/SharedPreferencesPlugin.kt: (121, 4): Class 
+'kotlin.Deprecated' was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Deprecated.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/SharedPreferencesPlugin.kt: (121, 4): Class 
+'kotlin.ReplaceWith' was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/ReplaceWith.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/SharedPreferencesPlugin.kt: (121, 4): Class 
+'kotlin.DeprecationLevel' was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/DeprecationLevel.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/SharedPreferencesPlugin.kt: (128, 12): Class 
+'kotlin.Unit' was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/SharedPreferencesPlugin.kt: (128, 12): Class 
+'kotlin.coroutines.CoroutineContext' was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/coroutines/CoroutineContext.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/SharedPreferencesPlugin.kt: (128, 26): Class 
+'kotlin.Unit' was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/SharedPreferencesPlugin.kt: (133, 5): Class 
+'kotlin.coroutines.CoroutineContext' was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/coroutines/CoroutineContext.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/SharedPreferencesPlugin.kt: (135, 20): Unresolved 
+reference: let
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/SharedPreferencesPlugin.kt: (135, 26): Cannot infer 
+a type for this parameter. Please specify it explicitly.
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/SharedPreferencesPlugin.kt: (136, 26): Cannot infer 
+a type for this parameter. Please specify it explicitly.
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/SharedPreferencesPlugin.kt: (140, 11): Class 
+'kotlin.Unit' was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/SharedPreferencesPlugin.kt: (140, 26): Class 
+'kotlin.Unit' was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/SharedPreferencesPlugin.kt: (150, 12): Class 
+'kotlin.coroutines.CoroutineContext' was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/coroutines/CoroutineContext.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/SharedPreferencesPlugin.kt: (156, 5): Class 
+'kotlin.Unit' was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/SharedPreferencesPlugin.kt: (156, 5): Class 
+'kotlin.coroutines.CoroutineContext' was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/coroutines/CoroutineContext.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/SharedPreferencesPlugin.kt: (169, 5): Class 
+'kotlin.Unit' was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/SharedPreferencesPlugin.kt: (169, 5): Class 
+'kotlin.coroutines.CoroutineContext' was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/coroutines/CoroutineContext.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/SharedPreferencesPlugin.kt: (181, 5): Class 
+'kotlin.Unit' was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/SharedPreferencesPlugin.kt: (181, 5): Class 
+'kotlin.coroutines.CoroutineContext' was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/coroutines/CoroutineContext.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/SharedPreferencesPlugin.kt: (196, 5): Class 
+'kotlin.Unit' was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/SharedPreferencesPlugin.kt: (196, 5): Class 
+'kotlin.coroutines.CoroutineContext' was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/coroutines/CoroutineContext.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/SharedPreferencesPlugin.kt: (212, 18): Unresolved 
+reference: let
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/SharedPreferencesPlugin.kt: (215, 7): 'return' is 
+not allowed here
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/SharedPreferencesPlugin.kt: (215, 30): Unresolved 
+reference: startsWith
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/SharedPreferencesPlugin.kt: (217, 30): Unresolved 
+reference: startsWith
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/SharedPreferencesPlugin.kt: (232, 18): Unresolved 
+reference: let
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/SharedPreferencesPlugin.kt: (235, 24): Unresolved 
+reference: startsWith
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/SharedPreferencesPlugin.kt: (235, 68): Unresolved 
+reference: startsWith
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/SharedPreferencesPlugin.kt: (237, 9): 'return' is 
+not allowed here
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/SharedPreferencesPlugin.kt: (237, 23): Unresolved 
+reference: filterIsInstance
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/SharedPreferencesPlugin.kt: (248, 17): Class 
+'kotlin.coroutines.CoroutineContext' was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/coroutines/CoroutineContext.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/SharedPreferencesPlugin.kt: (249, 23): Unresolved 
+reference: toList
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/SharedPreferencesPlugin.kt: (253, 31): Unresolved 
+reference: toSet
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/SharedPreferencesPlugin.kt: (254, 23): Unresolved 
+reference: mutableMapOf
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/SharedPreferencesPlugin.kt: (257, 11): Class 
+'kotlin.Unit' was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/SharedPreferencesPlugin.kt: (258, 19): Suspension 
+functions can be called only within coroutine body
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/SharedPreferencesPlugin.kt: (288, 33): Class 
+'kotlin.Unit' was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/SharedPreferencesPlugin.kt: (295, 31): Class 
+'kotlin.Unit' was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/SharedPreferencesPlugin.kt: (308, 75): Class 
+'kotlin.Unit' was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/SharedPreferencesPlugin.kt: (313, 74): Class 
+'kotlin.Unit' was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/SharedPreferencesPlugin.kt: (318, 72): Class 
+'kotlin.Unit' was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/SharedPreferencesPlugin.kt: (323, 90): Class 
+'kotlin.Unit' was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/SharedPreferencesPlugin.kt: (332, 74): Class 
+'kotlin.Unit' was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/SharedPreferencesPlugin.kt: (336, 4): Class 
+'kotlin.Deprecated' was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Deprecated.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/SharedPreferencesPlugin.kt: (336, 4): Class 
+'kotlin.ReplaceWith' was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/ReplaceWith.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/SharedPreferencesPlugin.kt: (336, 4): Class 
+'kotlin.DeprecationLevel' was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/DeprecationLevel.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/SharedPreferencesPlugin.kt: (343, 80): Class 
+'kotlin.Unit' was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/SharedPreferencesPlugin.kt: (351, 25): Unresolved 
+reference: ArrayList
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/SharedPreferencesPlugin.kt: (353, 72): Unresolved 
+reference: toSet
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/SharedPreferencesPlugin.kt: (360, 24): Class 
+'kotlin.Unit' was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/SharedPreferencesPlugin.kt: (370, 25): Unresolved 
+reference: HashMap
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/SharedPreferencesPlugin.kt: (372, 76): Unresolved 
+reference: toSet
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/SharedPreferencesPlugin.kt: (373, 22): Unresolved 
+reference: let
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/SharedPreferencesPlugin.kt: (373, 71): Unresolved 
+reference: it
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/SharedPreferencesPlugin.kt: (433, 26): Unresolved 
+reference: startsWith
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/SharedPreferencesPlugin.kt: (435, 24): Unresolved 
+reference: startsWith
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/SharedPreferencesPlugin.kt: (451, 19): Unresolved 
+reference: startsWith
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/SharedPreferencesPlugin.kt: (451, 55): Unresolved 
+reference: startsWith
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/SharedPreferencesPlugin.kt: (453, 43): Unresolved 
+reference: filterIsInstance
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/SharedPreferencesPlugin.kt: (466, 10): Unresolved 
+reference: filter
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/SharedPreferencesPlugin.kt: (466, 37): Unresolved 
+reference: it
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/SharedPreferencesPlugin.kt: (466, 45): Unresolved 
+reference: it
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/SharedPreferencesPlugin.kt: (466, 66): Unresolved 
+reference: toSet
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/SharedPreferencesPlugin.kt: (489, 5): Class 
+'kotlin.Unit' was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/SharedPreferencesPlugin.kt: (489, 15): Unresolved 
+reference: startsWith
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/SharedPreferencesPlugin.kt: (492, 24): Unresolved 
+reference: startsWith
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/SharedPreferencesPlugin.kt: (495, 34): Unresolved 
+reference: substring
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/SharedPreferencesPlugin.kt: (497, 22): Unresolved 
+reference: startsWith
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/SharedPreferencesPlugin.kt: (498, 20): Unresolved 
+reference: substring
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/SharedPreferencesPlugin.kt: (509, 12): Class 
+'kotlin.Unit' was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/SharedPreferencesPlugin.kt: (510, 12): Class 
+'kotlin.Unit' was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/Unit.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/SharedPreferencesPlugin.kt: (517, 45): Unresolved 
+reference: filterIsInstance
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/StringListObjectInputStream.kt: (17, 4): Class 
+'kotlin.jvm.Throws' was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.9.0, expected version is 1.7.1.
+The class is loaded from /home/user/.gradle/caches/transforms-3/9d519a5c276200f6dd1ff7d9e97f845d/transformed/jetified-kotlin-stdlib-1.9.22.jar!/kotlin/jvm/Throws.class
+e: /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.9/android/src/main/kotlin/io/flutter/plugins/sharedpreferences/StringListObjectInputStream.kt: (20, 9): Unresolved 
+reference: setOf
+/home/user/.pub-cache/hosted/pub.dev/flet-0.22.1/lib/src/utils/theme.dart:292:28: Error: A value of type 'TabBarThemeData' can't be returned from a function with return type 
+'TabBarTheme?'.
+ - 'TabBarThemeData' is from 'package:flutter/src/material/tab_bar_theme.dart' ('/home/user/flutter/packages/flutter/lib/src/material/tab_bar_theme.dart').
+ - 'TabBarTheme' is from 'package:flutter/src/material/tab_bar_theme.dart' ('/home/user/flutter/packages/flutter/lib/src/material/tab_bar_theme.dart').
+  return theme.tabBarTheme.copyWith(
+                           ^
+/home/user/.pub-cache/hosted/pub.dev/flet-0.22.1/lib/src/utils/theme.dart:373:28: Error: A value of type 'DialogThemeData' can't be returned from a function with return type 
+'DialogTheme?'.
+ - 'DialogThemeData' is from 'package:flutter/src/material/dialog_theme.dart' ('/home/user/flutter/packages/flutter/lib/src/material/dialog_theme.dart').
+ - 'DialogTheme' is from 'package:flutter/src/material/dialog_theme.dart' ('/home/user/flutter/packages/flutter/lib/src/material/dialog_theme.dart').
+  return theme.dialogTheme.copyWith(
+                           ^
+/home/user/.pub-cache/hosted/pub.dev/flet-0.22.1/lib/src/utils/theme.dart:420:26: Error: A value of type 'CardThemeData' can't be returned from a function with return type 'CardTheme?'.
+ - 'CardThemeData' is from 'package:flutter/src/material/card_theme.dart' ('/home/user/flutter/packages/flutter/lib/src/material/card_theme.dart').
+ - 'CardTheme' is from 'package:flutter/src/material/card_theme.dart' ('/home/user/flutter/packages/flutter/lib/src/material/card_theme.dart').
+  return theme.cardTheme.copyWith(
+                         ^
+Target kernel_snapshot_program failed: Exception
+
+
+FAILURE: Build completed with 2 failures.
+
+1: Task failed with an exception.
+-----------
+* What went wrong:
+Execution failed for task ':shared_preferences_android:compileReleaseKotlin'.
+> A failure occurred while executing org.jetbrains.kotlin.compilerRunner.GradleCompilerRunnerWithWorkers$GradleKotlinCompilerWorkAction
+   > Compilation error. See log for more details
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+==============================================================================
+
+2: Task failed with an exception.
+-----------
+* What went wrong:
+Execution failed for task ':app:compileFlutterBuildRelease'.
+> Process 'command '/home/user/flutter/bin/flutter'' finished with non-zero exit value 1
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+==============================================================================
+
+* Get more help at https://help.gradle.org
+
+BUILD FAILED in 37s
+Gradle task assembleRelease failed with exit code 1
+
+Error building Flet app - see the log of failed command above.
