@@ -7,6 +7,8 @@
   packages = [
     pkgs.python3
     pkgs.jdk20
+    # pkgs.libmpv
+    # pkgs.mpv
   ];
 
   # environment variables
