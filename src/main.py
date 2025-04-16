@@ -61,30 +61,30 @@ def line_chart():
             labels=[
                 ft.ChartAxisLabel(
                     value=1,
-                    label=ft.Text("1m", size=14, weight=ft.FontWeight.BOLD),
+                    label=ft.Text("0%", size=10, weight=ft.FontWeight.BOLD),
                 ),
                 ft.ChartAxisLabel(
                     value=2,
-                    label=ft.Text("2m", size=14, weight=ft.FontWeight.BOLD),
+                    label=ft.Text("20%", size=10, weight=ft.FontWeight.BOLD),
                 ),
                 ft.ChartAxisLabel(
                     value=3,
-                    label=ft.Text("3m", size=14, weight=ft.FontWeight.BOLD),
+                    label=ft.Text("40%", size=10, weight=ft.FontWeight.BOLD),
                 ),
                 ft.ChartAxisLabel(
                     value=4,
-                    label=ft.Text("4m", size=14, weight=ft.FontWeight.BOLD),
+                    label=ft.Text("60%", size=10, weight=ft.FontWeight.BOLD),
                 ),
                 ft.ChartAxisLabel(
                     value=5,
-                    label=ft.Text("5m", size=14, weight=ft.FontWeight.BOLD),
+                    label=ft.Text("80%", size=10, weight=ft.FontWeight.BOLD),
                 ),
                 ft.ChartAxisLabel(
                     value=6,
-                    label=ft.Text("6m", size=14, weight=ft.FontWeight.BOLD),
+                    label=ft.Text("100%", size=10, weight=ft.FontWeight.W_100),
                 ),
             ],
-            labels_size=40,
+            labels_size=60,
         ),
         bottom_axis=ft.ChartAxis(
             labels=[
@@ -92,7 +92,7 @@ def line_chart():
                     value=2,
                     label=ft.Container(
                         ft.Text(
-                            "Monday",
+                            "Mon",
                             size=16,
                             weight=ft.FontWeight.BOLD,
                             color=ft.colors.with_opacity(0.5, ft.colors.ON_SURFACE),
@@ -104,8 +104,7 @@ def line_chart():
                     value=7,
                     label=ft.Container(
                         ft.Text(
-                            "Tuesday",
-                            size=16,
+                            "Tue",
                             weight=ft.FontWeight.BOLD,
                             color=ft.colors.with_opacity(0.5, ft.colors.ON_SURFACE),
                         ),
@@ -116,8 +115,8 @@ def line_chart():
                     value=12,
                     label=ft.Container(
                         ft.Text(
-                            "Wednesday",
-                            size=16,
+                            "Tue",
+                            size=14,
                             weight=ft.FontWeight.BOLD,
                             color=ft.colors.with_opacity(0.5, ft.colors.ON_SURFACE),
                         ),
@@ -185,9 +184,8 @@ def main(page: ft.Page):
     # container_ref = ft.Ref[ft.Container]()
 
     page.floating_action_button = ft.FloatingActionButton(
-        text= str('+'),                                                                                                                                                                                                      
-        icon=None,
-        # ft.Icons.AIRPLAY,
+        #text= str('+'),                                                                                                                                                                                                      
+        icon= ft.Icons.AIRPLAY,
         on_click=manage_fab
     )
 
