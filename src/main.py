@@ -1,20 +1,5 @@
-import flet as ft
+import flet as ft 
 
-async def main(page: ft.Page):
-    page.theme_mode= ft.ThemeMode.LIGHT
-    container_ref = ft.Ref[ft.Container]()
-
-    async def manage_fab(e):
-        print('FAB')                                                                                                                                                                                             
-    
-    page.floating_action_button = ft.FloatingActionButton(
-        text= str('+'),                                                                                                                                                                                                      
-        icon=None,
-        # ft.Icons.AIRPLAY,
-        on_click=manage_fab
-    )
-
-   
 def line_chart():
     class State:
         toggle = True
@@ -155,7 +140,7 @@ def line_chart():
 
     def toggle_data(e):
         if s.toggle:
-            pass
+            print('toggle')
         else:
             chart.data_series = data_1
             chart.max_y = 4
@@ -167,9 +152,53 @@ def line_chart():
         controls=[ft.IconButton(ft.icons.REFRESH, on_click=toggle_data), chart],
     )
 
+def example(page):
+    def tabs_changed(e):
+        print(f'Tab changed to {e.control.selected_index}')
+
+    charts = ft.Tabs(
+        selected_index=0,
+        scrollable=False,
+        expand=True,
+        # on_change=tabs_changed,
+        tabs=[
+            ft.Tab(text='Crypto', content=line_chart()),
+            ft.Tab(text='News', content= ft.ElevatedButton(text='Keep Reading'))
+        ],
+    )
+    return ft.Column(
+        expand=True,
+        alignment=ft.MainAxisAlignment.CENTER,
+        controls=[charts],
+        )
+    
+async def manage_fab(e):
+    print('FAB')                                                                                                                                                                                             
+
+def main(page: ft.Page):
+    page.title= 'BORSO'
+    page.theme_mode= ft.ThemeMode.DARK
+    
+    # page.window_width = 390
+    # page.window_height = 844
+
+    # container_ref = ft.Ref[ft.Container]()
+
+    page.floating_action_button = ft.FloatingActionButton(
+        text= str('+'),                                                                                                                                                                                                      
+        icon=None,
+        # ft.Icons.AIRPLAY,
+        on_click=manage_fab
+    )
+
+   
+
     container=ft.Container(
         ft.ElevatedButton(text="Say helo to QiMono")
-    )                                                                                                                                                                                                                
-    page.add(ft.SafeArea(container, expand= True))
+    )     
+
+    # page.add(example(page))
+    page.add(ft.SafeArea(example(page), expand= True))
+    # page.add(ft.SafeArea(container, expand= True))
 
 ft.app(main)
