@@ -128,9 +128,9 @@ def line_chart():
                     ),
                 ),
                 ft.ChartAxisLabel(
-                    ft.Text(
-                        value=12,
-                        label=ft.Container(
+                    value=12,
+                    label=ft.Container(
+                        ft.Text(
                             "Wednesday",
                             size=16,
                             weight=ft.FontWeight.BOLD,
